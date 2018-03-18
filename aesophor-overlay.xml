@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layman>
+  <overlay contact="aesophor@mailfence.com" name="aesophor" src="git://github.com/aesophor/aesophor-overlay.git" status="unofficial" type="git">
+      <link>https://github.com/aesophor/aesophor-overlay.git</link>
+    <description>aesophor's personal portage overlay</description>
+  </overlay>
+</layman>
