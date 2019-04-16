@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -6,11 +6,13 @@ inherit eutils linux-info linux-mod
 
 DESCRIPTION="Broadcom's IEEE 802.11a/b/g/n hybrid Linux device driver"
 HOMEPAGE="https://www.broadcom.com/support/802.11"
-SRC_BASE="https://github.com/antoineco/broadcom-wl/"
-SRC_URI="${SRC_BASE}archive/patch-linux4.7.tar.gz"
+SRC_BASE="https://docs.broadcom.com/docs-and-downloads/docs/linux_sta/hybrid-v35"
+SRC_URI="x86? ( ${SRC_BASE}-nodebug-pcoem-${PV//\./_}.tar.gz )
+	amd64? ( ${SRC_BASE}_64-nodebug-pcoem-${PV//\./_}.tar.gz )
+	https://docs.broadcom.com/docs-and-downloads/docs/linux_sta/README_${PV}.txt -> README-${P}.txt"
 
 LICENSE="Broadcom"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 
 RESTRICT="mirror"
 
@@ -23,8 +25,6 @@ MODULE_NAMES="wl(net/wireless)"
 MODULESD_WL_ALIASES=("wlan0 wl")
 
 pkg_pretend() {
-	ewarn "Since linux 4.15, init_timer() interface has been removed. This driver"
-	ewarn "is updated by antoineco to work with new version of linux kernels."
 	ewarn
 	ewarn "If you are stuck using this unmaintained driver (likely in a MacBook),"
 	ewarn "you may be interested to know that a newer compatible wireless card"
