@@ -20,4 +20,5 @@ src_compile() {
 
 src_install() {
     dobin build/Wmderland
+    dobin ipc-client/build/Wmderlandc
 }
