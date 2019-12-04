@@ -11,8 +11,10 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-src_install() {
+src_compile() {
 	./build.sh
-	cd build
-    dobin Wmderland
+}
+
+src_install() {
+    dobin build/Wmderland
 }
