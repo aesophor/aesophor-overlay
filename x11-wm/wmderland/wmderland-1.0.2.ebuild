@@ -5,7 +5,7 @@ EAPI=7
 
 DESCRIPTION="X11 tiling window manager using space partitioning trees"
 HOMEPAGE="https://github.com/aesophor/wmderland"
-SRC_URI="https://codeload.github.com/aesophor/wmderland/tar.gz/1.0.2"
+SRC_URI="https://raw.githubusercontent.com/aesophor/aesophor-overlay/master/x11-wm/wmderland/wmderland-1.0.2.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
