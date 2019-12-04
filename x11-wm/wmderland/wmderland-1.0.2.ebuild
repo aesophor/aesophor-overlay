@@ -10,8 +10,13 @@ SRC_URI="https://raw.githubusercontent.com/aesophor/aesophor-overlay/master/x11-
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 x86"
+IUSE="debug"
 
-DEPEND="x11-libs/libX11"
+DEPEND="
+	x11-libs/libX11
+	debug? ( dev-cpp/glog )
+"
+
 RDEPEND="${DEPEND}"
 
 src_compile() {
