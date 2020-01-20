@@ -9,7 +9,7 @@ DESCRIPTION="Broadcom Linux hybrid wireless driver (64-bit) for Linux 4.7 and la
 HOMEPAGE="https://github.com/antoineco/broadcom-wl/tree/patch-linux4.7"
 SRC_URI=""
 
-EGIT_REPO_URI="https://github.com/patjak/bcwc_pcie"
+EGIT_REPO_URI="https://github.com/antoineco/broadcom-wl"
 
 LICENSE=""
 SLOT="0"
