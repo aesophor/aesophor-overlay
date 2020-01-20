@@ -20,7 +20,7 @@ RDEPEND="${DEPEND}"
 
 BUILD_TARGETS="all"
 MODULE_NAMES="wl()"
-CONFIG_CHECK="CONFIG_IPW2100"
+CONFIG_CHECK=""
 
 src_unpack() {
 	kernel_is -ge 4 7 && {
