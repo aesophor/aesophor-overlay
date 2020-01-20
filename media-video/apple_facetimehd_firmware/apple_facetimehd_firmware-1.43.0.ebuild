@@ -25,10 +25,6 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}
 
 PKG_URL="https://updates.cdn-apple.com/2019/cert/041-88431-20191011-e7ee7d98-2878-4cd9-bc0a-d98b3a1e24b1/OSXUpd10.11.5.dmg"
-
-# xz stream #31 from OSXUpdCombo10.11.2.pkg/Payload (part 4)
-# = xz stream #33 from OSXUpd10.11.2.pkg (part 2)
-# inside osxupd10.11.2.dmg
 PKG_RANGE="204909802-207733123"
 
 CAM_IF_FILE="AppleCameraInterface"
@@ -41,9 +37,12 @@ FIRMWARE_FILE="firmware.bin"
 FIRMWARE_DIR="facetimehd"
 FIRMWARE_MD5="4e1d11e205e5c55d128efa0029b268fe"
 
-src_compile() {
+src_prepare() {
 	curl -s -L -r ${PKG_RANGE} ${PKG_URL} | xzcat -q |\
 			cpio --format odc -i --to-stdout ${CAM_IF_PKG_PATH} > ${CAM_IF_FILE}
+}
+
+src_compile() {
 	echo "${CAM_IF_MD5} ${CAM_IF_FILE}" | md5sum -c || die "camera interface checksum mismatch"
 	dd bs=1 skip=${FIRMWARE_OFFSET} count=${FIRMWARE_SIZE} if=${CAM_IF_FILE} |\
 			gunzip > ${FIRMWARE_FILE}
