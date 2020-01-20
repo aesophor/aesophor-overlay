@@ -29,7 +29,7 @@ PKG_URL="https://updates.cdn-apple.com/2019/cert/041-88431-20191011-e7ee7d98-287
 # xz stream #31 from OSXUpdCombo10.11.2.pkg/Payload (part 4)
 # = xz stream #33 from OSXUpd10.11.2.pkg (part 2)
 # inside osxupd10.11.2.dmg
-PKG_RANGE="420107885-421933300"
+PKG_RANGE="204909802-207733123"
 
 CAM_IF_FILE="AppleCameraInterface"
 CAM_IF_PKG_PATH="./System/Library/Extensions/AppleCameraInterface.kext/Contents/MacOS/AppleCameraInterface"
