@@ -37,10 +37,11 @@ FIRMWARE_FILE="firmware.bin"
 FIRMWARE_DIR="facetimehd"
 FIRMWARE_MD5="4e1d11e205e5c55d128efa0029b268fe"
 
-# Sandbox is disabled in this ebuild phase, so we can download the fucking firmware
+# Sandbox is disabled in this ebuild phase,
+# so we can only download the fucking firmware during this phase.
 pkg_setup() {
 	curl -s -L -r ${PKG_RANGE} ${PKG_URL} | xzcat -q |\
-			cpio --format odc -i --to-stdout ${CAM_IF_PKG_PATH} > ${CAM_IF_FILE}
+			cpio --format odc -i --to-stdout ${CAM_IF_PKG_PATH} > ../work/${CAM_IF_FILE}
 }
 
 src_compile() {
