@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
 
-PKG_URL="https://updates.cdn-apple.com/2019/cert/041-88431-20191011-e7ee7d98-2878-4cd9-bc0a-d98b3a1e24b1/0SXUpd10.11.5.dmg"
+PKG_URL="https://updates.cdn-apple.com/2019/cert/041-88431-20191011-e7ee7d98-2878-4cd9-bc0a-d98b3a1e24b1/OSXUpd10.11.5.dmg"
 
 # xz stream #31 from OSXUpdCombo10.11.2.pkg/Payload (part 4)
 # = xz stream #33 from OSXUpd10.11.2.pkg (part 2)
