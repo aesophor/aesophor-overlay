@@ -1,7 +1,8 @@
-## Installation
 Due to the new sandbox mechanism introduced in recent versions of Gentoo, 
 it is rather difficult to download the firmware of FaceTimeHD via ebuild,
 and thus you'll need to download the firmware yourself.
+
+<br>
 
 ### 1. Firmware Download and Extraction
 ```
